@@ -29,7 +29,7 @@ const HeroSection = () => {
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground animate-slide-up" style={{ animationDelay: "0.1s" }}>
                 Hi, I'm{" "}
-                <span className="text-gradient">Reazul Islam</span>
+                <span className="text-primary">Reazul Islam</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-light animate-slide-up" style={{ animationDelay: "0.2s" }}>
                 Radiographer & Diagnostic Imaging Student
