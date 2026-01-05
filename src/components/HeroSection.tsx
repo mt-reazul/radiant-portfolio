@@ -29,10 +29,10 @@ const HeroSection = () => {
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground animate-slide-up" style={{ animationDelay: "0.1s" }}>
                 Hi, I'm{" "}
-                <span className="text-gradient">Nayeem</span>
+                <span className="text-gradient">Reazul Islam</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-light animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                Radiographer & Diagnostic Imaging Specialist
+                Radiographer & Diagnostic Imaging Student
               </p>
             </div>
 
@@ -47,7 +47,7 @@ const HeroSection = () => {
                 Get In Touch
               </Button>
               <Button variant="outline" size="xl">
-                View Experience
+                View Skills
               </Button>
             </div>
 
@@ -81,8 +81,8 @@ const HeroSection = () => {
                     <Stethoscope size={48} className="text-primary" />
                   </div>
                   <div>
-                    <p className="text-lg font-heading font-semibold text-foreground">Nayeem</p>
-                    <p className="text-sm text-muted-foreground">Radiographer</p>
+                    <p className="text-lg font-heading font-semibold text-foreground">Reazul Islam</p>
+                    <p className="text-sm text-muted-foreground">Radiography Student</p>
                   </div>
                 </div>
               </div>
