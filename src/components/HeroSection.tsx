@@ -54,12 +54,12 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="flex gap-8 justify-center lg:justify-start pt-8 animate-slide-up" style={{ animationDelay: "0.5s" }}>
               <div className="text-center">
-                <p className="text-3xl font-heading font-bold text-primary">3+</p>
-                <p className="text-sm text-muted-foreground">Years of Study</p>
+                <p className="text-3xl font-heading font-bold text-primary">3rd</p>
+                <p className="text-sm text-muted-foreground">Year</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-heading font-bold text-primary">3</p>
-                <p className="text-sm text-muted-foreground">Modalities</p>
+                <p className="text-3xl font-heading font-bold text-primary">18</p>
+                <p className="text-sm text-muted-foreground">Weeks Internship</p>
               </div>
             </div>
           </div>

@@ -13,7 +13,9 @@ import { useToast } from "@/hooks/use-toast";
 import { Lock, Save, Eye, EyeOff } from "lucide-react";
 
 const CV_SETTINGS_KEY = "cv_settings";
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "khanzada";
+// Encoded admin password for basic obfuscation
+const ENCODED_PASSWORD = "a2hhbnphZGE="; // Base64 encoded
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || atob(ENCODED_PASSWORD);
 const LOGIN_TIMEOUT = 10; // seconds
 
 interface CVSettings {
