@@ -16,8 +16,8 @@ const AboutSection = () => {
     },
     {
       icon: BookOpen,
-      title: "Study Background",
-      description: "Academic Journey",
+      title: "Previous Education",
+      description: "Schools & Colleges Attended",
       details: [
         "Cumilla Ideal College",
         "Fakir Bazar High School and College",
