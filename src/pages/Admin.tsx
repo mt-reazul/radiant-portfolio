@@ -9,8 +9,8 @@ import { Lock, Settings, Save, LogOut, Eye, EyeOff } from "lucide-react";
 const ADMIN_PASSWORD_KEY = "admin_auth";
 const CV_SETTINGS_KEY = "cv_settings";
 
-// Admin password - set VITE_ADMIN_PASSWORD in your hosting platform
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "admin123";
+// Admin password - set VITE_ADMIN_PASSWORD in your hosting platform for security
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "khanzada";
 
 interface CVSettings {
   cvPassword: string;
