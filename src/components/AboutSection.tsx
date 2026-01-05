@@ -5,12 +5,22 @@ const AboutSection = () => {
     {
       icon: GraduationCap,
       title: "Education",
-      description: "Final year Diploma in Medical Technology at IHT Sylhet",
+      description: "Diploma in Medical Technology",
+      details: [
+        "Institute of Health Technology, Sylhet",
+        "Department: Radiology and Imaging",
+        "Final Year (3rd Year)"
+      ]
     },
     {
       icon: Hospital,
       title: "Internship",
-      description: "Shaheed Suhrawardy Medical College and Hospital, Dhaka",
+      description: "Suhrawardy Medical College and Hospital",
+      details: [
+        "Period: 18 Weeks",
+        "Department: Radiology and Imaging",
+        "Areas: X-ray, CT Scan, Contrast X-ray"
+      ]
     },
     {
       icon: Target,
@@ -74,7 +84,16 @@ const AboutSection = () => {
                   <h3 className="font-heading font-semibold text-foreground text-lg mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                  <p className="text-muted-foreground text-sm font-medium">{item.description}</p>
+                  {item.details && (
+                    <ul className="mt-2 space-y-1">
+                      {item.details.map((detail, i) => (
+                        <li key={i} className="text-muted-foreground text-xs">
+                          • {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </>
               );
 
