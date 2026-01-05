@@ -1,14 +1,18 @@
 import { 
   BookOpen, 
   FileSpreadsheet, 
-  Presentation, 
   Code, 
-  Video, 
   Users, 
   Scan, 
   Radiation, 
   FlaskConical,
-  GraduationCap
+  GraduationCap,
+  Monitor,
+  Wrench,
+  Briefcase,
+  Heart,
+  Languages,
+  Globe
 } from "lucide-react";
 
 const SkillsSection = () => {
@@ -65,12 +69,25 @@ const SkillsSection = () => {
   ];
 
   const computerSkills = [
-    { icon: FileSpreadsheet, name: "MS Word", description: "Document creation and formatting" },
-    { icon: FileSpreadsheet, name: "MS Excel", description: "Data management and analysis" },
-    { icon: Presentation, name: "MS PowerPoint", description: "Professional presentations" },
+    { icon: FileSpreadsheet, name: "Microsoft Office", description: "Word, Excel, PowerPoint & more" },
+    { icon: Globe, name: "Google Workspace", description: "Docs, Sheets, Drive & collaboration tools" },
+    { icon: Monitor, name: "Data Entry", description: "Accurate and efficient data management" },
     { icon: Code, name: "Web Development", description: "Building websites and web applications" },
-    { icon: Video, name: "Video Editing", description: "Video production and editing" },
-    { icon: Users, name: "Team Management", description: "Leadership and collaboration skills" },
+    { icon: Wrench, name: "Computer Troubleshooting", description: "Hardware & software problem solving" },
+  ];
+
+  const softSkills = [
+    { icon: Users, name: "Team Management", description: "Leadership and collaboration" },
+    { icon: Heart, name: "Work Ethic", description: "Dedicated and reliable professional" },
+    { icon: Briefcase, name: "Project Management", description: "Planning and execution skills" },
+  ];
+
+  const languages = [
+    { name: "Bangla", level: "Native", percentage: 100 },
+    { name: "English", level: "Fluent", percentage: 85 },
+    { name: "Hindi", level: "Conversational", percentage: 70 },
+    { name: "Urdu", level: "Conversational", percentage: 65 },
+    { name: "Turkish", level: "Basic", percentage: 25 },
   ];
 
   return (
@@ -85,7 +102,7 @@ const SkillsSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Equipped with comprehensive knowledge and practical skills in 
-            diagnostic imaging and radiographic procedures.
+            diagnostic imaging, technology, and professional development.
           </p>
         </div>
 
@@ -143,11 +160,11 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        {/* Computer & Soft Skills */}
-        <div>
+        {/* Computer Skills */}
+        <div className="mb-16">
           <h3 className="font-heading font-semibold text-foreground text-2xl mb-8 text-center">
-            <Code className="inline-block mr-3 text-primary" size={28} />
-            Computer & Soft Skills
+            <Monitor className="inline-block mr-3 text-primary" size={28} />
+            Computer Skills
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {computerSkills.map((skill) => (
@@ -166,6 +183,58 @@ const SkillsSection = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Soft Skills */}
+        <div className="mb-16">
+          <h3 className="font-heading font-semibold text-foreground text-2xl mb-8 text-center">
+            <Users className="inline-block mr-3 text-primary" size={28} />
+            Soft Skills
+          </h3>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {softSkills.map((skill) => (
+              <div
+                key={skill.name}
+                className="gradient-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 transition-all duration-300 group text-center"
+              >
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <skill.icon className="text-primary" size={28} />
+                </div>
+                <h4 className="font-heading font-semibold text-foreground text-lg mb-1">
+                  {skill.name}
+                </h4>
+                <p className="text-muted-foreground text-sm">{skill.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Languages */}
+        <div>
+          <h3 className="font-heading font-semibold text-foreground text-2xl mb-8 text-center">
+            <Languages className="inline-block mr-3 text-primary" size={28} />
+            Languages
+          </h3>
+          <div className="max-w-3xl mx-auto">
+            <div className="gradient-card rounded-2xl p-8 border border-border/50">
+              <div className="space-y-6">
+                {languages.map((lang) => (
+                  <div key={lang.name} className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="font-heading font-semibold text-foreground">{lang.name}</span>
+                      <span className="text-muted-foreground text-sm">{lang.level}</span>
+                    </div>
+                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-500"
+                        style={{ width: `${lang.percentage}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
