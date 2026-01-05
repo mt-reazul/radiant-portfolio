@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,19 +11,31 @@ import { Input } from "@/components/ui/input";
 import { Download, Lock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+const CV_SETTINGS_KEY = "cv_settings";
+
+interface CVSettings {
+  cvPassword: string;
+  cvUrl: string;
+}
+
 const CVDownloadButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [settings, setSettings] = useState<CVSettings>({ cvPassword: "", cvUrl: "" });
   const { toast } = useToast();
 
-  // Password is stored in environment variable
-  // Set VITE_CV_PASSWORD in your hosting platform (Vercel, Netlify, etc.)
-  const correctPassword = import.meta.env.VITE_CV_PASSWORD || "demo123";
-  
-  // CV file URL - place your CV in public folder as cv.pdf
-  // Or set VITE_CV_URL environment variable for external URL
-  const cvUrl = import.meta.env.VITE_CV_URL || "/cv.pdf";
+  useEffect(() => {
+    // Load settings from localStorage (set by admin)
+    const savedSettings = localStorage.getItem(CV_SETTINGS_KEY);
+    if (savedSettings) {
+      setSettings(JSON.parse(savedSettings));
+    }
+  }, []);
+
+  // Use localStorage settings first, then env vars as fallback
+  const correctPassword = settings.cvPassword || import.meta.env.VITE_CV_PASSWORD || "demo123";
+  const cvUrl = settings.cvUrl || import.meta.env.VITE_CV_URL || "/cv.pdf";
 
   const handleDownload = () => {
     setIsLoading(true);
