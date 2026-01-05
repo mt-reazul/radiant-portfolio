@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import CVDownloadButton from "./CVDownloadButton";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,9 +47,9 @@ const Header = () => {
           ))}
         </nav>
 
-        <Button variant="hero" size="lg" className="hidden md:flex">
-          Download CV
-        </Button>
+        <div className="hidden md:flex">
+          <CVDownloadButton />
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -74,9 +74,7 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="hero" size="lg">
-              Download CV
-            </Button>
+            <CVDownloadButton />
           </nav>
         </div>
       )}
