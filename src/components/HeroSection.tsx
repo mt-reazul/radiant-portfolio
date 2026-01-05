@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Stethoscope, Activity } from "lucide-react";
+import CVDownloadButton from "./CVDownloadButton";
 
 const HeroSection = () => {
   return (
@@ -43,12 +44,10 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.4s" }}>
-              <Button variant="hero" size="xl">
-                Get In Touch
+              <Button variant="hero" size="xl" asChild>
+                <a href="#contact">Get In Touch</a>
               </Button>
-              <Button variant="outline" size="xl">
-                View Skills
-              </Button>
+              <CVDownloadButton />
             </div>
 
             {/* Stats */}
