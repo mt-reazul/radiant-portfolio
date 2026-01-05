@@ -15,7 +15,7 @@ const AboutSection = () => {
     {
       icon: Target,
       title: "MediChakri.com",
-      description: "COO & Co-Founder - Bangladesh's Medical Job Portal",
+      description: "COO & Co-Founder - First Dedicated Medical Job Portal of Bangladesh",
       link: "https://medichakri.com",
     },
     {
@@ -52,7 +52,7 @@ const AboutSection = () => {
               Beyond my studies, I serve as the <strong className="text-foreground">COO & Co-Founder of{" "}
               <a href="https://medichakri.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 MediChakri.com
-              </a></strong> - Bangladesh's dedicated job portal for medical professionals. 
+              </a></strong> - the First Dedicated Medical Job Portal of Bangladesh. 
               We connect Doctors, Nurses, DMF, Medical Technologists, Hospital Receptionists, 
               Ward Boys, and Attendants with healthcare employers across the country.
             </p>

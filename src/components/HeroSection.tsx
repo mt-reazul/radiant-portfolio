@@ -37,9 +37,9 @@ const HeroSection = () => {
             </div>
 
             <p className="text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-              Final year student at IHT Sylhet & COO of MediChakri.com - Bangladesh's 
-              premier job portal for medical professionals including Doctors, Nurses, 
-              Medical Technologists, and healthcare staff.
+              Final year student at IHT Sylhet & COO of MediChakri.com - the First 
+              Dedicated Medical Job Portal of Bangladesh, connecting Doctors, Nurses, 
+              Medical Technologists, and healthcare staff with employers.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.4s" }}>
