@@ -6,19 +6,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "nayeem@email.com",
-      href: "mailto:nayeem@email.com",
+      value: "reazulislam732@gmail.com",
+      href: "mailto:reazulislam732@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+880 1XXX-XXXXXX",
-      href: "tel:+8801XXXXXXXXX",
+      value: "+880 1641-696822",
+      href: "tel:+8801641696822",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Sylhet, Bangladesh",
+      value: "Adarsha Sadar, Cumilla, Chittagong, Bangladesh",
       href: "#",
     },
   ];

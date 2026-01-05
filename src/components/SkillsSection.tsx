@@ -1,36 +1,76 @@
-import { Scan, Radiation, FlaskConical, Shield, Users, Brain } from "lucide-react";
+import { 
+  BookOpen, 
+  FileSpreadsheet, 
+  Presentation, 
+  Code, 
+  Video, 
+  Users, 
+  Scan, 
+  Radiation, 
+  FlaskConical,
+  GraduationCap
+} from "lucide-react";
 
 const SkillsSection = () => {
+  const academicSubjects = [
+    {
+      year: "First Year",
+      subjects: [
+        "Basic Anatomy",
+        "Basic Physiology",
+        "Community Medicine",
+        "Microbiology",
+        "English",
+        "Physics",
+        "Chemistry",
+      ],
+    },
+    {
+      year: "Second Year",
+      subjects: [
+        "Basic Radiological Procedure and Positioning",
+        "Photography and Radiation Safety",
+        "Radiological Physics",
+        "Computer",
+        "Radiological Anatomy",
+      ],
+    },
+    {
+      year: "Third Year",
+      subjects: [
+        "18 Week Internship",
+        "Advanced Procedure",
+        "Basic Radiological Findings",
+        "Patient Care",
+      ],
+    },
+  ];
+
   const technicalSkills = [
     {
       icon: Scan,
       name: "General X-Ray",
       description: "Proficient in conventional radiographic techniques and positioning",
-      level: 85,
     },
     {
       icon: Radiation,
       name: "CT Scan",
       description: "Experienced in computed tomography imaging procedures",
-      level: 75,
     },
     {
       icon: FlaskConical,
       name: "Contrast Radiography",
       description: "Skilled in contrast-enhanced imaging procedures",
-      level: 70,
-    },
-    {
-      icon: Shield,
-      name: "Radiation Safety",
-      description: "Knowledge of radiation protection and safety protocols",
-      level: 90,
     },
   ];
 
-  const softSkills = [
-    { icon: Users, name: "Patient Care", description: "Compassionate and professional patient interaction" },
-    { icon: Brain, name: "Anatomy Knowledge", description: "Strong understanding of human anatomy and pathology" },
+  const computerSkills = [
+    { icon: FileSpreadsheet, name: "MS Word", description: "Document creation and formatting" },
+    { icon: FileSpreadsheet, name: "MS Excel", description: "Data management and analysis" },
+    { icon: Presentation, name: "MS PowerPoint", description: "Professional presentations" },
+    { icon: Code, name: "Web Development", description: "Building websites and web applications" },
+    { icon: Video, name: "Video Editing", description: "Video production and editing" },
+    { icon: Users, name: "Team Management", description: "Leadership and collaboration skills" },
   ];
 
   return (
@@ -49,56 +89,84 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        {/* Technical Skills */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {technicalSkills.map((skill, index) => (
-            <div
-              key={skill.name}
-              className="gradient-card rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
-            >
-              <div className="flex items-start gap-6">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <skill.icon className="text-primary" size={28} />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-heading font-semibold text-foreground text-xl mb-2">
-                    {skill.name}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {skill.description}
-                  </p>
-                  {/* Progress Bar */}
-                  <div className="relative h-2 bg-secondary rounded-full overflow-hidden">
-                    <div
-                      className="absolute inset-y-0 left-0 gradient-teal rounded-full transition-all duration-1000"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                  <p className="text-primary text-sm font-medium mt-2">{skill.level}%</p>
-                </div>
+        {/* Academic Subjects */}
+        <div className="mb-16">
+          <h3 className="font-heading font-semibold text-foreground text-2xl mb-8 text-center">
+            <GraduationCap className="inline-block mr-3 text-primary" size={28} />
+            Academic Curriculum
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {academicSubjects.map((yearData) => (
+              <div
+                key={yearData.year}
+                className="gradient-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 transition-all duration-300"
+              >
+                <h4 className="font-heading font-semibold text-primary text-lg mb-4">
+                  {yearData.year}
+                </h4>
+                <ul className="space-y-2">
+                  {yearData.subjects.map((subject, index) => (
+                    <li key={index} className="flex items-center gap-2 text-muted-foreground">
+                      <BookOpen size={14} className="text-primary flex-shrink-0" />
+                      <span className="text-sm">{subject}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* Soft Skills */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {softSkills.map((skill) => (
-            <div
-              key={skill.name}
-              className="gradient-card rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-300 group flex items-center gap-6"
-            >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                <skill.icon className="text-primary" size={28} />
-              </div>
-              <div>
-                <h3 className="font-heading font-semibold text-foreground text-xl mb-2">
+        {/* Radiography Skills */}
+        <div className="mb-16">
+          <h3 className="font-heading font-semibold text-foreground text-2xl mb-8 text-center">
+            <Radiation className="inline-block mr-3 text-primary" size={28} />
+            Radiography Skills
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {technicalSkills.map((skill) => (
+              <div
+                key={skill.name}
+                className="gradient-card rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-300 group text-center"
+              >
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <skill.icon className="text-primary" size={28} />
+                </div>
+                <h4 className="font-heading font-semibold text-foreground text-xl mb-2">
                   {skill.name}
-                </h3>
-                <p className="text-muted-foreground">{skill.description}</p>
+                </h4>
+                <p className="text-muted-foreground text-sm">
+                  {skill.description}
+                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Computer & Soft Skills */}
+        <div>
+          <h3 className="font-heading font-semibold text-foreground text-2xl mb-8 text-center">
+            <Code className="inline-block mr-3 text-primary" size={28} />
+            Computer & Soft Skills
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {computerSkills.map((skill) => (
+              <div
+                key={skill.name}
+                className="gradient-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 transition-all duration-300 group flex items-center gap-4"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <skill.icon className="text-primary" size={24} />
+                </div>
+                <div>
+                  <h4 className="font-heading font-semibold text-foreground text-lg">
+                    {skill.name}
+                  </h4>
+                  <p className="text-muted-foreground text-sm">{skill.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
