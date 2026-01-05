@@ -13,7 +13,8 @@ import {
   Globe,
   Sparkles,
   Palette,
-  Video
+  Video,
+  MonitorSmartphone
 } from "lucide-react";
 
 const SkillsSection = () => {
@@ -32,6 +33,11 @@ const SkillsSection = () => {
       icon: FlaskConical,
       name: "Contrast Radiography",
       description: "Skilled in contrast-enhanced imaging procedures",
+    },
+    {
+      icon: MonitorSmartphone,
+      name: "CR & DR Systems",
+      description: "Proficient in both Computed Radiography and Digital Radiography machines",
     },
   ];
 
