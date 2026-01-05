@@ -64,7 +64,7 @@ const AcademicSection = () => {
               </div>
               <div>
                 <h3 className="font-heading font-semibold text-foreground text-xl">
-                  Diploma in Radiography
+                  Diploma in Medical Technology
                 </h3>
                 <p className="text-muted-foreground text-sm">
                   3 Year Program Curriculum
