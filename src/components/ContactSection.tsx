@@ -71,7 +71,7 @@ const ContactSection = () => {
               <p className="text-muted-foreground mb-4">Follow me on:</p>
               <div className="flex gap-4">
                 <a
-                  href="https://facebook.com/reazul.732"
+                  href="https://www.facebook.com/REAZUL.732"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-secondary/50 border border-border/50 flex items-center justify-center hover:bg-primary/20 hover:border-primary/30 transition-all duration-300"
