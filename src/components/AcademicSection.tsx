@@ -33,7 +33,6 @@ const AcademicSection = () => {
     {
       year: "Third Year",
       subjects: [
-        "18 Week Internship",
         "Advanced Procedure",
         "Basic Radiological Findings",
         "Patient Care",
@@ -48,12 +47,9 @@ const AcademicSection = () => {
           <p className="text-primary font-medium tracking-wider uppercase mb-4">
             My Education
           </p>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground">
             Academic <span className="text-gradient">Curriculum</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Comprehensive coursework in Radiography and Medical Imaging Technology
-          </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
