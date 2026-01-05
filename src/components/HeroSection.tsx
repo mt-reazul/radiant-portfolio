@@ -21,57 +21,45 @@ const HeroSection = () => {
         <Activity size={50} />
       </div>
 
-      <div className="container mx-auto px-6 pt-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 pt-16 sm:pt-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-8 text-center lg:text-left">
-            <div className="space-y-4">
-              <p className="text-primary font-medium tracking-wider uppercase animate-slide-up">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-primary font-medium tracking-wider uppercase text-xs sm:text-sm animate-slide-up">
                 Medical Technologist | COO & Co-Founder
               </p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground animate-slide-up" style={{ animationDelay: "0.1s" }}>
                 Hi, I'm{" "}
                 <span className="text-primary">Reazul Islam</span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground font-light animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light animate-slide-up" style={{ animationDelay: "0.2s" }}>
                 Radiographer & Co-Founder of <a href="https://medichakri.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MediChakri.com</a>
               </p>
             </div>
 
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+            <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto lg:mx-0 animate-slide-up" style={{ animationDelay: "0.3s" }}>
               Final year student at IHT Sylhet & COO of MediChakri.com - the First 
               Dedicated Medical Job Portal of Bangladesh, connecting Doctors, Nurses, 
               Medical Technologists, and healthcare staff with employers.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.4s" }}>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-slide-up" style={{ animationDelay: "0.4s" }}>
               <Button variant="hero" size="xl" asChild>
                 <a href="#contact">Get In Touch</a>
               </Button>
               <CVDownloadButton />
             </div>
-
-            {/* Stats */}
-            <div className="flex gap-8 justify-center lg:justify-start pt-8 animate-slide-up" style={{ animationDelay: "0.5s" }}>
-              <div className="text-center">
-                <p className="text-3xl font-heading font-bold text-primary">3rd</p>
-                <p className="text-sm text-muted-foreground">Year</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-heading font-bold text-primary">18</p>
-                <p className="text-sm text-muted-foreground">Weeks Internship</p>
-              </div>
-            </div>
           </div>
 
           {/* Profile Image Area */}
-          <div className="relative flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <div className="relative flex justify-center lg:justify-end animate-fade-in order-1 lg:order-2" style={{ animationDelay: "0.6s" }}>
             <div className="relative">
               {/* Glow behind image */}
               <div className="absolute inset-0 gradient-teal rounded-full blur-3xl opacity-30 scale-90" />
               
               {/* Profile circle */}
-              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-2 border-primary/30 flex items-center justify-center shadow-elevated overflow-hidden">
+              <div className="relative w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full border-2 border-primary/30 flex items-center justify-center shadow-elevated overflow-hidden">
                 <img 
                   src={profilePhoto} 
                   alt="Reazul Islam - Radiographer & Co-Founder of MediChakri.com" 
@@ -80,9 +68,9 @@ const HeroSection = () => {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-xl px-4 py-3 shadow-card">
-                <p className="text-xs text-muted-foreground">Currently at</p>
-                <p className="text-sm font-semibold text-foreground">IHT Sylhet</p>
+              <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-card border border-border rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-card">
+                <p className="text-[10px] sm:text-xs text-muted-foreground">Currently at</p>
+                <p className="text-xs sm:text-sm font-semibold text-foreground">IHT Sylhet</p>
               </div>
             </div>
           </div>
