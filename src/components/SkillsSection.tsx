@@ -1,12 +1,10 @@
 import { 
-  BookOpen, 
   FileSpreadsheet, 
   Code, 
   Users, 
   Scan, 
   Radiation, 
   FlaskConical,
-  GraduationCap,
   Monitor,
   Wrench,
   Briefcase,
@@ -19,40 +17,6 @@ import {
 } from "lucide-react";
 
 const SkillsSection = () => {
-  const academicSubjects = [
-    {
-      year: "First Year",
-      subjects: [
-        "Basic Anatomy",
-        "Basic Physiology",
-        "Community Medicine",
-        "Microbiology",
-        "English",
-        "Physics",
-        "Chemistry",
-      ],
-    },
-    {
-      year: "Second Year",
-      subjects: [
-        "Basic Radiological Procedure and Positioning",
-        "Photography and Radiation Safety",
-        "Radiological Physics",
-        "Computer",
-        "Radiological Anatomy",
-      ],
-    },
-    {
-      year: "Third Year",
-      subjects: [
-        "18 Week Internship",
-        "Advanced Procedure",
-        "Basic Radiological Findings",
-        "Patient Care",
-      ],
-    },
-  ];
-
   const technicalSkills = [
     {
       icon: Scan,
@@ -110,34 +74,6 @@ const SkillsSection = () => {
             Equipped with comprehensive knowledge and practical skills in 
             diagnostic imaging, technology, and professional development.
           </p>
-        </div>
-
-        {/* Academic Subjects */}
-        <div className="mb-16">
-          <h3 className="font-heading font-semibold text-foreground text-2xl mb-8 text-center">
-            <GraduationCap className="inline-block mr-3 text-primary" size={28} />
-            Academic Curriculum
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {academicSubjects.map((yearData) => (
-              <div
-                key={yearData.year}
-                className="gradient-card rounded-2xl p-6 border border-border/50 hover:border-primary/30 transition-all duration-300"
-              >
-                <h4 className="font-heading font-semibold text-primary text-lg mb-4">
-                  {yearData.year}
-                </h4>
-                <ul className="space-y-2">
-                  {yearData.subjects.map((subject, index) => (
-                    <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <BookOpen size={14} className="text-primary flex-shrink-0" />
-                      <span className="text-sm">{subject}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Radiography Skills */}
