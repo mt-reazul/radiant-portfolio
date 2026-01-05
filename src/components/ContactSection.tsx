@@ -87,35 +87,20 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Form Card */}
-          <div className="gradient-card rounded-2xl p-8 border border-border/50 flex flex-col items-center justify-center text-center">
-            <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-              <Send className="text-primary" size={32} />
-            </div>
-            
-            <h3 className="font-heading font-semibold text-foreground text-2xl mb-4">
-              Send a Message
-            </h3>
-            
-            <p className="text-muted-foreground mb-8 max-w-sm">
-              Have a question or want to work together? Fill out the form and I'll get back to you as soon as possible.
-            </p>
-            
-            <Button 
-              variant="hero" 
-              size="xl" 
-              className="w-full max-w-xs"
-              asChild
+          {/* Embedded Google Form */}
+          <div className="gradient-card rounded-2xl p-2 border border-border/50 overflow-hidden">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfFQz2cJ2V4uD9_v5G1J4L6Kf4dPq3z7V8yN5tR2xB3mW0A/viewform?embedded=true"
+              width="100%"
+              height="600"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              className="rounded-xl"
+              title="Contact Form"
             >
-              <a 
-                href="https://forms.gle/syv6dWxNMkC7spbk6" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Open Contact Form
-                <Send size={18} />
-              </a>
-            </Button>
+              Loading…
+            </iframe>
           </div>
         </div>
       </div>
