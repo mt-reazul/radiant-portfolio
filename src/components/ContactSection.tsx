@@ -88,19 +88,36 @@ const ContactSection = () => {
           </div>
 
           {/* Embedded Google Form */}
-          <div className="gradient-card rounded-2xl p-2 border border-border/50 overflow-hidden">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdqUtTjFPcAdjkXv9pv8EyHSbiEr1jFzoss-leTNCq6SI7bFw/viewform?embedded=true"
-              width="100%"
-              height="600"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              className="rounded-xl"
-              title="Contact Form"
-            >
-              Loading…
-            </iframe>
+          <div className="relative rounded-2xl overflow-hidden border border-border/50 bg-background">
+            {/* Header */}
+            <div className="bg-secondary/50 px-6 py-4 border-b border-border/50">
+              <h3 className="font-heading font-semibold text-foreground text-xl flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Send className="text-primary" size={18} />
+                </div>
+                Send a Message
+              </h3>
+            </div>
+            
+            {/* Form Container - clips Google branding */}
+            <div className="relative overflow-hidden" style={{ height: '520px' }}>
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdqUtTjFPcAdjkXv9pv8EyHSbiEr1jFzoss-leTNCq6SI7bFw/viewform?embedded=true"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                className="absolute top-0 left-0 w-full"
+                style={{ 
+                  filter: 'invert(1) hue-rotate(180deg)',
+                  background: 'transparent'
+                }}
+                title="Contact Form"
+              >
+                Loading…
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
