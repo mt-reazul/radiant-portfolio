@@ -12,7 +12,10 @@ import {
   Briefcase,
   Heart,
   Languages,
-  Globe
+  Globe,
+  Sparkles,
+  Palette,
+  Video
 } from "lucide-react";
 
 const SkillsSection = () => {
@@ -74,6 +77,9 @@ const SkillsSection = () => {
     { icon: Monitor, name: "Data Entry", description: "Accurate and efficient data management" },
     { icon: Code, name: "Web Development", description: "Building websites and web applications" },
     { icon: Wrench, name: "Computer Troubleshooting", description: "Hardware & software problem solving" },
+    { icon: Sparkles, name: "AI Prompting & Tools", description: "Utilizing AI tools effectively" },
+    { icon: Palette, name: "Basic Graphic Design", description: "Creating visual content & designs" },
+    { icon: Video, name: "Video Editing", description: "Editing and producing video content" },
   ];
 
   const softSkills = [
