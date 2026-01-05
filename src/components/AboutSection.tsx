@@ -53,10 +53,9 @@ const AboutSection = () => {
           {/* About Text */}
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              I am currently pursuing my Diploma in Medical Technology (Radiography) 
-              at the Institute of Health Technology, Sylhet, and I'm in my final year 
-              of studies. My journey in medical imaging has been both challenging and 
-              rewarding, fueling my passion for diagnostic healthcare.
+              I am a final year (3rd year) student pursuing my <strong className="text-foreground">Diploma in Medical Technology</strong> in 
+              the <strong className="text-foreground">Radiology and Imaging</strong> department at the <strong className="text-foreground">Institute of Health Technology, Sylhet</strong>. 
+              My journey in medical imaging has been both challenging and rewarding, fueling my passion for diagnostic healthcare.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Beyond my studies, I serve as the <strong className="text-foreground">COO & Co-Founder of{" "}
